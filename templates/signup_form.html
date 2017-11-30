@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Sign up</h1>
+<form action = "/signup" method="post">
+    <label for = "user-name">User Name:</label>
+    <input id = "user-name" type="text" name="user_name" >
+    <span class="error">{{user_name_error}}</span>
+    <br>
+    <label for = "pass1">Password:</label>
+    <input id = "pass1" type="password" name="pass_1" >
+    <span class="error">{{pass_1_error}}</span>
+    <br>
+    <label for = "pass2">Password(comfirm):</label>
+    <input id = "pass2" type="password" name="pass_2" >
+    <span class="error">{{pass_2_error}}</span>
+    <br>
+    <label for = "email">Email(optional):</label>
+    <input type="text" name="email" value="">
+    <span class="error">{{email_error}}</span>
+    <br>
+    <input type="submit">
+</form>
+{% endblock %}
