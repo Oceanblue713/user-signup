@@ -38,9 +38,7 @@ def check_validate():
         return render_template('signup_form.html', pass_2_error = "Passwords don't match")
 
     #email
-    elif ' ' in e_mail:
-         return render_template('signup_form.html', email_error = "That's not a valid email")
-    elif '@' not in e_mail or '.' not in e_mail:
+    elif len(e_mail) > 0 and '@' not in e_mail and '.' not in e_mail:
          return render_template('signup_form.html', email_error = "That's not a valid email")
 
     else:
